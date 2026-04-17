@@ -48,3 +48,9 @@ jobs:
           name: abyss-dl-${{ github.ref_name }}
           files: AbyssVideoDownloader/build/libs/abyss-dl.jar
           draft: true
+
+          - name: Upload JAR
+  uses: actions/upload-artifact@v4
+  with:
+    name: abyss-jar
+    path: build/libs/*.jar
